@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planets</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="baseClass">
+        <button id="sun">sun</button>
+        <button id="mercury">mercury</button>
+        <button id="venus">venus</button>
+        <button id="earth">earth</button>
+        <button id="mars">mars</button>
+        <button id="jupiter">jupiter</button>
+        <button id="saturn">saturn</button>
+        <button id="uranus">uranus</button>
+        <button id="neptune">neptune</button>
+        <br>
+        <div>
+            <p id="name"></p>
+            <p id="diameter"></p>
+            <p id="orbit"></p>
+            <p id="days"></p>
+        </div>
+    </div>
+    <script>
+        class planet{
+            name = null;
+            diameter = null;
+            orbit = null;
+            days = null;
+            constructor(name,diameter,orbit,days){
+                this.name = name;
+                this.diameter = diameter;
+                this.orbit = orbit;
+                this.days = days;
+            }
+            names(){
+                return this.name;
+            }
+            diameters(){
+                return this.diameter;
+            }
+            orbits(){
+                return this.orbit;
+            }
+            dayss(){
+                return this.days;
+            }
+        }
+        const sun = new planet("Sun","1.3927 million km","none","none");
+        const mercury = new planet("Mercury","3,031 miles (4,878 km)","88 Earth days","58.6 Earth days");
+        const venus = new planet("Venus","7,521 miles (12,104 km)","225 Earth days","241 Earth days");
+        const earth = new planet("Earth","7,926 miles (12,760 km)","365.24 days","23 hours, 56 minutes");
+        const mars = new planet("Mars","4,217 miles (6,787 km)","687 Earth days","24 hours, 37 minutes");
+        const jupiter = new planet("Jupiter","86,881 miles (139,822 km)","11.9 Earth years","9.8 Earth hours");
+        const saturn = new planet("Saturn","74,900 miles (120,500 km)","29.5 Earth years","About 10.5 Earth hours");
+        const uranus = new planet("Uranus","31,763 miles (51,120 km)","84 Earth years","18 Earth hours");
+        const neptune = new planet("Neptune","30,775 miles (49,530 km)","165 Earth years","19 Earth hours");
+        
+        document.getElementById("sun").onclick = () => {
+            document.getElementById("name").innerHTML = "Name of Planet: "+sun.names();
+            document.getElementById("diameter").innerHTML = "Diameter of Planet: "+sun.diameters();
+            document.getElementById("orbit").innerHTML = "Orbit of Planet: "+sun.orbits();
+            document.getElementById("days").innerHTML = "Name of Planet: "+sun.dayss();
+        }
+        document.getElementById("mercury").onclick = () => {
+            document.getElementById("name").innerHTML = "Name of Planet: "+mercury.names();
+            document.getElementById("diameter").innerHTML = "Diameter of Planet: "+mercury.diameters();
+            document.getElementById("orbit").innerHTML = "Orbit of Planet: "+mercury.orbits();
+            document.getElementById("days").innerHTML = "Name of Planet: "+mercury.dayss();
+        }
+        document.getElementById("venus").onclick = () => {
+            document.getElementById("name").innerHTML = "Name of Planet: "+venus.names();
+            document.getElementById("diameter").innerHTML = "Diameter of Planet: "+venus.diameters();
+            document.getElementById("orbit").innerHTML = "Orbit of Planet: "+venus.orbits();
+            document.getElementById("days").innerHTML = "Name of Planet: "+venus.dayss();
+        }
+        document.getElementById("earth").onclick = () => {
+            document.getElementById("name").innerHTML = "Name of Planet: "+earth.names();
+            document.getElementById("diameter").innerHTML = "Diameter of Planet: "+earth.diameters();
+            document.getElementById("orbit").innerHTML = "Orbit of Planet: "+earth.orbits();
+            document.getElementById("days").innerHTML = "Name of Planet: "+earth.dayss();
+        }
+        document.getElementById("mars").onclick = () => {
+            document.getElementById("name").innerHTML = "Name of Planet: "+mars.names();
+            document.getElementById("diameter").innerHTML = "Diameter of Planet: "+mars.diameters();
+            document.getElementById("orbit").innerHTML = "Orbit of Planet: "+mars.orbits();
+            document.getElementById("days").innerHTML = "Name of Planet: "+mars.dayss();
+        }
+        document.getElementById("jupiter").onclick = () => {
+            document.getElementById("name").innerHTML = "Name of Planet: "+jupiter.names();
+            document.getElementById("diameter").innerHTML = "Diameter of Planet: "+jupiter.diameters();
+            document.getElementById("orbit").innerHTML = "Orbit of Planet: "+jupiter.orbits();
+            document.getElementById("days").innerHTML = "Name of Planet: "+jupiter.dayss();
+        }
+        document.getElementById("saturn").onclick = () => {
+            document.getElementById("name").innerHTML = "Name of Planet: "+saturn.names();
+            document.getElementById("diameter").innerHTML = "Diameter of Planet: "+saturn.diameters();
+            document.getElementById("orbit").innerHTML = "Orbit of Planet: "+saturn.orbits();
+            document.getElementById("days").innerHTML = "Name of Planet: "+saturn.dayss();
+        }
+        document.getElementById("uranus").onclick = () => {
+            document.getElementById("name").innerHTML = "Name of Planet: "+uranus.names();
+            document.getElementById("diameter").innerHTML = "Diameter of Planet: "+uranus.diameters();
+            document.getElementById("orbit").innerHTML = "Orbit of Planet: "+uranus.orbits();
+            document.getElementById("days").innerHTML = "Name of Planet: "+uranus.dayss();
+        }
+        document.getElementById("neptune").onclick = () => {
+            document.getElementById("name").innerHTML = "Name of Planet: "+neptune.names();
+            document.getElementById("diameter").innerHTML = "Diameter of Planet: "+neptune.diameters();
+            document.getElementById("orbit").innerHTML = "Orbit of Planet: "+neptune.orbits();
+            document.getElementById("days").innerHTML = "Name of Planet: "+neptune.dayss();
+        }
+    </script>
+</body>
+</html>
