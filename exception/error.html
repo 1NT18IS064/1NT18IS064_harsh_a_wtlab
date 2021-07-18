@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {background-color: powderblue;
+text-align:center;}
+h1{
+    font-size: 500%;
+}
+p{
+    font-size: 250%;
+}
+button {
+    background-color: rgb(0, 0, 0); 
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+   
+  }
+  .btn{
+ background-color: white; 
+    color: black; 
+    border: 2px solid black;
+    border-radius: 40px;
+  }
+
+</style>
+</head>
+<body>
+<h1>ERROR HANDLING</h2>
+<p>enter a number less than 10
+</p>
+<input id="demo" type="text" style="line-height: 50px;">
+<button onclick="func()" class="btn">TRY</button>
+<p id="a"></p>
+<script>
+function func(){
+    var msg,x;
+    msg=document.getElementById("a");
+    msg.innerHTML=" ";
+    x=document.getElementById("demo").value;
+    try{
+        if(x=="") throw "empty";
+        if(isNaN(x)) throw "not a number";
+        if(x>10) throw "number is not less than 10";
+        if(x>0 && x<10) throw "correct, the number is less than 10";
+
+    }
+    catch(err){
+        msg.innerHTML=err;
+       
+       
+    }
+}
+</script>
+</body>
+</html>
+
