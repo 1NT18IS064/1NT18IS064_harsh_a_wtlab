@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Castle</title>
+    <style>
+        #one{
+            /* margin-left: 180px;
+            margin-top: 80px; */
+            margin-left: 25%;
+            margin-top: 10%;
+            width: 400px;
+            height: 300px;
+            border: 1px solid blue;
+            background-color: blue;
+        }
+        #two{
+            margin-left: 20px;
+            margin-top: 25px;
+            width: 350px;
+            height: 250px;
+            border: 1px solid green;
+            background-color: green;
+        }
+        #thre{
+            margin-left: 20px;
+            margin-top: 25px;
+            width: 300px;
+            height: 200px;
+            border: 1px solid yellow;
+            background-color: yellow;
+        }
+        #four{
+            margin-left: 20px;
+            margin-top: 25px;
+            width: 250px;
+            height: 150px;
+            border: 1px solid violet;
+            background-color: violet;
+        }
+        #five{
+            margin-left: 20px;
+            margin-top: 25px;
+            width: 200px;
+            height: 100px;
+            border: 1px solid cyan;
+            background-color:cyan;
+        }
+        #six{
+            margin-left: 20px;
+            margin-top: 25px;
+            width: 150px;
+            height: 50px;
+            border: 1px solid red;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="one">
+        <div id="two">
+            <div id="thre">
+                <div id="four">
+                    <div id="five">
+                        <div id="six">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const one = document.getElementById('one');
+        const two = document.getElementById('two');
+        const thre = document.getElementById('thre');
+        const four = document.getElementById('four');
+        const five = document.getElementById('five');
+        const six = document.getElementById('six');
+        // ========================================= //
+        one.addEventListener('mouseenter',()=>{
+            console.log('Entered inside Zone ONE (blue)!!');
+        });
+        two.addEventListener('mouseenter',()=>{
+            console.log('Entered inside Zone TWO (green)!!');
+        });
+        thre.addEventListener('mouseenter',()=>{
+            console.log('Entered inside Zone THREE (yellow)!!');
+        });
+        four.addEventListener('mouseenter',()=>{
+            console.log('Entered inside Zone FOUR (voilet)!!');
+        });
+        five.addEventListener('mouseenter',()=>{
+            console.log('Entered inside Zone FIVE (cyan)!!');
+        });
+        six.addEventListener('mouseenter',()=>{
+            console.log('Entered inside Zone SIX (red) ==> DEAD!!');
+        });
+        // =========================================== //
+        one.addEventListener('mouseleave',()=>{
+            console.log('Left Zone ONE (blue)!!');
+        });
+        two.addEventListener('mouseleave',()=>{
+            console.log('Left inside Zone TWO (green)!!');
+        });
+        thre.addEventListener('mouseleave',()=>{
+            console.log('Left inside Zone THREE (yellow)!!');
+        });
+        four.addEventListener('mouseleave',()=>{
+            console.log('Left inside Zone FOUR (voilet)!!');
+        });
+        five.addEventListener('mouseleave',()=>{
+            console.log('Left inside Zone FIVE (cyan)!!');
+        });
+        six.addEventListener('mouseleave',()=>{
+            console.log('Left inside Zone SIX (red) ==> ALIVE!!');
+        });
+        // ============================================ //
+    </script>
+</body>
+</html>

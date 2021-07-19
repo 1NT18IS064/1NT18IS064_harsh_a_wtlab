@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        .numpad{
+            width: 35px;
+            height: 35px;
+        }
+        .ans{
+            width: 150px;
+            height: 20px;
+        }
+        .calc{
+            padding: 10px;
+            height: auto;
+            width: 160px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="calc">
+        <label>Calculator</label>
+        <input type="text" id="disp" class="ans" value="0" readonly>
+        <table>
+            <tr>
+                <td><button onclick="putVal(1)" class="numpad">1</button></td>
+                <td><button onclick="putVal(2)" class="numpad">2</button></td>
+                <td><button onclick="putVal(3)" class="numpad">3</button></td>
+                <td><button onclick="putVal('+')" id="plus" class="numpad">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="putVal(4)" class="numpad">4</button></td>
+                <td><button onclick="putVal(5)" class="numpad">5</button></td>
+                <td><button onclick="putVal(6)" class="numpad">6</button></td>
+                <td><button onclick="putVal('-')" id="minus" class="numpad">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="putVal(7)" class="numpad">7</button></td>
+                <td><button onclick="putVal(8)" class="numpad">8</button></td>
+                <td><button onclick="putVal(9)" class="numpad">9</button></td>
+                <td><button onclick="putVal('x')" id="multi" class="numpad">x</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="putVal('C')" class="numpad">C</button></td>
+                <td><button onclick="putVal(0)" class="numpad">0</button></td>
+                <td><button onclick="evalExp('=')" class="numpad">=</button></td>
+                <td><button onclick="putVal('/')" id="divi" class="numpad">/</button></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function putVal(x){
+            if(x=='C'){
+                document.getElementById("disp").setAttribute("value", "0");
+                document.getElementById("plus").disabled = false;
+                document.getElementById("minus").disabled = false;
+                document.getElementById("multi").disabled = false;
+                document.getElementById("divi").disabled = false;
+            } else {
+                if(document.getElementById("disp").value!="0"){
+                    switch(x){
+                        case '+':
+                            document.getElementById("plus").disabled = true;
+                        break;
+                        case '-':
+                            document.getElementById("minus").disabled = true;
+                        break;
+                        case 'x':
+                            document.getElementById("multi").disabled = true;
+                        break;
+                        case '/':
+                            document.getElementById("divi").disabled = true;
+                        break;
+                    }
+                    document.getElementById("disp").setAttribute("value", document.getElementById("disp").value+x);
+                } else if(x!='x'&&x!='+'&&x!='-'&&x!='/') {
+                    document.getElementById("disp").setAttribute("value", x);
+                }
+            }
+        }
+        function evalExp(y){
+            if(y=='='){
+                
+            }
+        }
+    </script>
+</body>
+</html>
