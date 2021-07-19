@@ -1,68 +1,39 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
         .fbox{
-            border: 5px solid black;
+            border: 2px solid black;
             padding: 30px;
-            background-color: powderblue;
-        }
-        body{
-            text-align: center;
-            background-color: white;
-        }
-        button {
-        background-color: rgb(0, 0, 0); 
-        border: none;
-        color: white;
-        padding: 16px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        transition-duration: 0.4s;
-        cursor: pointer;
-        }
-  
-        .sub {
-        background-color: white; 
-        color: black; 
-        border: 2px solid black;
-        border-radius: 40px;
+            /* margin-right: 1650px; */
+            /* margin-right: 70%; */
         }
     </style>
 </head>
 <body>
-<br><br><br><br>
     <div class="fbox">
-        <h1>LOGIN PAGE</h1>
-        <input id="fname" style="line-height: 50px;" type="text" placeholder="first name" required>
-        <br><br>
-        <input id="lname" style="line-height: 50px;" type="text" placeholder="last name" required>
-        <br><br>
-        <input id="pass" style="line-height: 50px;" type="password" placeholder="password" required>
-        <br><br>
+        <input id="uname" type="text" placeholder="username" required>
+        <br>
+        <input id="pass" type="password" placeholder="password" required>
+        <br>
         <button id="sub">Submit</button>
-        <p id="out"></p>
     </div>
     <script>
         let data = new Set();
         document.getElementById('sub').onclick = () => {
-            let user = document.getElementById('fname');
+            // console.log('inside function');
+            let user = document.getElementById('uname');
             let pass = document.getElementById('pass');
-            let last=document.getElementById('lname');
             let ob = {
-                'fname': user.value,
-                'lname': last.value,
+                'username': user.value,
                 'password': pass.value
             };
-            if(data.has(fname))
-             {document.getElementById("out").innerHTML="data already entered";}
-            else{
             data.add(ob);
-             console.log(data);
-            }
+            console.log(data);
         };
     </script>
 </body>
